@@ -1,6 +1,6 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
-var passport = require("../config/passport");
+var garageExchange = require("../config/garageExchange");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -31,6 +31,7 @@ module.exports = function(app) {
     req.logout();
     res.redirect("/");
   });
+  
 
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", function(req, res) {

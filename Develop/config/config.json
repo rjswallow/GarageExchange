@@ -1,35 +1,21 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
-    "password": null,
-    "database": "passport_demo",
-=======
     "password": "influence",
     "database": "garageExchange",
->>>>>>> 3a5d8b49e0c08669c0c71e250802d4205bb3b1fc
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-<<<<<<< HEAD
-    "password": null,
-    "database": "database_test",
-=======
     "password": "influence",
     "database": "garageExchange",
->>>>>>> 3a5d8b49e0c08669c0c71e250802d4205bb3b1fc
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-<<<<<<< HEAD
-    "password": null,
-=======
     "password": "influence",
->>>>>>> 3a5d8b49e0c08669c0c71e250802d4205bb3b1fc
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
