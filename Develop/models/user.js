@@ -11,6 +11,14 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         isEmail: true
       }
+
+// Post table
+//       Date
+//       Name
+//       Description
+
+// User table
+
     },
     // The password cannot be null
     password: {
