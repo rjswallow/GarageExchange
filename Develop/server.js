@@ -3,7 +3,7 @@ var express = require("express");
 var session = require("express-session");
 // Requiring passport as we've configured it
 var exphbs = require("express-handlebars");
-var passport = require("./config/passport");
+var passport = require("./config/garageExchange");
 
 // Setting up port and requiring models for syncing
 var PORT = process.env.PORT || 8080;
@@ -26,7 +26,7 @@ app.use(passport.session());
 
 // Requiring our routes
 require("./routes/html-routes.js")(app);
-// require("./routes/api-routes.js")(app);
+require("./routes/api-routes.js")(app);
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(function() {
