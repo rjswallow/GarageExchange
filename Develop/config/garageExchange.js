@@ -1,10 +1,10 @@
-var garageExhange = require("garageExhange");
-var LocalStrategy = require("garageExhange-local").Strategy;
+var passport = require("passport");
+var LocalStrategy = require("passport-local").Strategy;
 
 var db = require("../models");
 
 // Telling garageExhange we want to use a Local Strategy. In other words, we want login with a username/email and password
-garageExhange.use(new LocalStrategy(
+passport.use(new LocalStrategy(
   // Our user will sign in using an email, rather than a "username"
   {
     usernameField: "email"
@@ -37,11 +37,11 @@ garageExhange.use(new LocalStrategy(
 // In order to help keep authentication state across HTTP requests,
 // Sequelize needs to serialize and deserialize the user
 // Just consider this part boilerplate needed to make it all work
-garageExchange.serializeUser(function(user, cb) {
+passport.serializeUser(function(user, cb) {
   cb(null, user);
 });
 
-garageExchange.deserializeUser(function(obj, cb) {
+passport.deserializeUser(function(obj, cb) {
   cb(null, obj);
 });
 
