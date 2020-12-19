@@ -46,15 +46,5 @@ module.exports = function(app) {
   //     });
   //   }
   // });
-  app.get("/api/user", function(req, res) {
-    // console.log(req.body);
-    db.User.create({
-      email: "sam@sam.com",
-      password: "hello",
-    })
-      .then(function(dbUser) {
-        res.json(dbUser);
-      });
-  });
 };
 
