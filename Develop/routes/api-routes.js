@@ -41,7 +41,7 @@ module.exports = function(app) {
       // Test it
       // return res.send(data);
   
-      res.render("index", { garageExchange: data });
+      res.render("index", { post: data });
     });
   });
   
@@ -56,7 +56,7 @@ module.exports = function(app) {
     // When using the MySQL package, we'd use ?s in place of any values to be inserted, which are then swapped out with corresponding elements in the array
     // This helps us avoid an exploit known as SQL injection which we'd be open to if we used string concatenation
     // https://en.wikipedia.org/wiki/SQL_injection
-    connection.query("INSERT INTO garageExchange VALUES (?)", [req.body.task], function(err, result) {
+    connection.query("INSERT INTO Post VALUES (?)", [req.body.task], function(err, result) {
       if (err) throw err;
   
       res.redirect("/");
