@@ -2,3 +2,10 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+.jumbotron {
+  background-image:url('garage2.png');
+  height:500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}

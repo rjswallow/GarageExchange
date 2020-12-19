@@ -1,0 +1,65 @@
+<div>
+    <!--Logo Garage Exhange-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.handlebars">Garage Exhange<span class="sr-only"></span></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--Buttons list -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="row">
+            <div class="col-md-8">
+                <form class="block form-horizontal" action="mailto:">
+
+                    <!--h1 tag (heading) for "Post" -->
+                    <h1 class="block-header">PosT </h1>
+                    <hr />
+
+                    <!--"Name" box -->
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Item Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="name" placeholder="Name" required>
+                        </div>
+                    </div>
+
+                    <!--"Message" box -->
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="msg">Description</label>
+                        <div class="col-sm-10">
+                            <textarea id="msg" class="form-control" rows="3" placeholder="Item description"
+                                required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="customFile">Choose a file or drag it here.</label>
+                        <input type="file" class="form-control" id="customFile" />
+                    </div>
+
+                    <!--Button "Submit" -->
+                    <button class="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--Footer tag -->
+    <footer class="footer">
+        <div class="footerline"></div>
+
+        <p class="text-muted footertext text-center">
+
+            &copy; Powered bY
+        </p>
+    </footer>
+
+</div>
