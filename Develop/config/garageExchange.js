@@ -46,4 +46,4 @@ passport.deserializeUser(function(obj, cb) {
 });
 
 // Exporting our configured garageExhange
-module.exports = garageExhange;
+module.exports = passport;
