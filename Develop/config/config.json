@@ -8,14 +8,14 @@
   },
   "test": {
     "username": "root",
-    "password": "T3chnolo@y",
+    "password": "password",
     "database": "garageExchange",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "influence",
+    "password": "password",
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
