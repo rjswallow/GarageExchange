@@ -1,3 +1,4 @@
+const Sequelize = require("sequelize");
 
 module.exports = function(sequelize, DataTypes) {
     var posts = sequelize.define("Posts", {
@@ -9,7 +10,9 @@ module.exports = function(sequelize, DataTypes) {
          type: DataTypes.STRING,
          allowNull: false
       },
-      date: DataTypes.DATE,
+      picture: {
+          type: Sequelize.BLOB("long"),
+      }
     });
     return posts;
   };
