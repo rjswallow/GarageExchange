@@ -96,12 +96,28 @@ module.exports = function(app) {
     res.render("index", {posts:allPosts});
   });
 
+  app.get("/signup", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("/members");
+    }
+    res.sendFile(path.join(__dirname, "../public/signup.html"));
+  });
+
+  // app.get("/login", function(req, res) {
+  //   // If the user already has an account send them to the members page
+  //   if (req.user) {
+  //     res.redirect("/members");
+  //   }
+  //   res.render("login");
+  // });
+
   app.get("/login", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
       res.redirect("/members");
     }
-    res.render("login");
+    res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
   app.get("/post", function(req, res) {
