@@ -16,6 +16,7 @@ var imageData8 = "/pictures/imageData8.jpg"
 var imageData9 = "/pictures/imageData9.jpg"
 var imageData10 = "/pictures/imageData10.jpg"
 var imageData11 = "/pictures/imageData11.jpg"
+var imageData12 = "/pictures/imageData12.jpg"
 
 var allPosts = [
   {
@@ -78,11 +79,17 @@ var allPosts = [
       "Beautiful Bizassa glass tiles. They can go indoors or out, vertically or horizontally and around corners. 19 boxes @ ~ 16 square feet per box, plus two matching bowl sinks.",
     picture: imageData10,
   },
-  {
+   {
     item: "Specialized Hardrock Sport Disc",
     description:
       "Giving away my Specialized Hardrock Sport Disc mountain bike RST Gila suspension forks, Acera front derailleur, XTR rear. Triple crank, 8-speed cassette, 26 inch wheels, Disc brakes.",
     picture: imageData11,
+  },
+  {
+    item: "Metal Rotating Storage Bins",
+    description:
+      "Frick Gallager rotobin 38 inch tall, 34 inch wide, with 3 shelves (5 partitions each), on wheels.",
+    picture: imageData12,
   }
 ];
 
