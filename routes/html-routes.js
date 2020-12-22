@@ -5,17 +5,17 @@ var fs = require("fs");
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
-var imageData1 = fs.readFileSync(path.join(__dirname , "../pictures/imageData1.jpg"));
-var imageData2 = fs.readFileSync(path.join(__dirname , "../pictures/imageData2.jpg"));
-var imageData3 = fs.readFileSync(path.join(__dirname , "../pictures/imageData3.jpg"));
-var imageData4 = fs.readFileSync(path.join(__dirname , "../pictures/imageData4.jpg"));
-var imageData5 = fs.readFileSync(path.join(__dirname , "../pictures/imageData5.jpg"));
-var imageData6 = fs.readFileSync(path.join(__dirname , "../pictures/imageData6.jpg"));
-var imageData7 = fs.readFileSync(path.join(__dirname , "../pictures/imageData7.jpg"));
-var imageData8 = fs.readFileSync(path.join(__dirname , "../pictures/imageData8.jpg"));
-var imageData9 = fs.readFileSync(path.join(__dirname , "../pictures/imageData9.jpg"));
-var imageData10 = fs.readFileSync(path.join(__dirname , "../pictures/imageData10.jpg"));
-var imageData11 = fs.readFileSync(path.join(__dirname , "../pictures/imageData11.jpg"));
+var imageData1 = "/pictures/imageData1.jpg";
+var imageData2 = "/pictures/imageData2.jpg"
+var imageData3 = "/pictures/imageData3.jpg"
+var imageData4 = "/pictures/imageData4.jpg"
+var imageData5 = "/pictures/imageData5.jpg"
+var imageData6 = "/pictures/imageData6.jpg"
+var imageData7 = "/pictures/imageData7.jpg"
+var imageData8 = "/pictures/imageData8.jpg"
+var imageData9 = "/pictures/imageData9.jpg"
+var imageData10 = "/pictures/imageData10.jpg"
+var imageData11 = "/pictures/imageData11.jpg"
 
 var allPosts = [
   {
@@ -83,7 +83,7 @@ var allPosts = [
     description:
       "Giving away my Specialized Hardrock Sport Disc mountain bike RST Gila suspension forks, Acera front derailleur, XTR rear. Triple crank, 8-speed cassette, 26 inch wheels, Disc brakes.",
     picture: imageData11,
-  },
+  }
 ];
 
 module.exports = function(app) {
@@ -101,7 +101,7 @@ module.exports = function(app) {
   //   if (req.user) {
   //     res.redirect("/members");
   //   }
-  //   res.sendFile(path.join(__dirname, "../public/signup.html"));
+  //   res.sendFile(path.join(__dirname, "../public/signup.html"
   // });
   app.get("/signup", function(req, res) {
     // // If the user already has an account send them to the members page
@@ -116,7 +116,7 @@ module.exports = function(app) {
   //   if (req.user) {
   //     res.redirect("/members");
   //   }
-  //   res.sendFile(path.join(__dirname, "../views/login.handlebars"));
+  //   res.sendFile(path.join(__dirname, "../views/login.handlebars"
   // });
 
   app.get("/login", function(req, res) {
@@ -132,7 +132,7 @@ module.exports = function(app) {
   //   if (req.user) {
   //     res.redirect("/members");
   //   }
-  //   res.sendFile(path.join(__dirname, "../public/login.html"));
+  //   res.sendFile(path.join(__dirname, "../public/login.html"
   // });
 
   app.get("/post", function(req, res) {
@@ -162,7 +162,7 @@ module.exports = function(app) {
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
+    res.sendFile(path.join(__dirname, "../public/members.html"))
   });
 
 };
