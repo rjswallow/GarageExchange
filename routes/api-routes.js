@@ -2,9 +2,45 @@
 var db = require("../models");
 var passport = require("../config/passport");
 var posts = require("../models/post");
-
+var multer  = require('multer');
+var upload = multer({ dest: 'pictures/' });  
+var path = require("path")
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, path.join(__dirname,'../public/pictures'))
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now()+".jpg")
+  }
+})
+ 
+var upload = multer({ storage: storage })
 
 module.exports = function(app) {
+  app.post('/uploadfile', upload.single('myFile'), (req, res, next) => {
+    const file = req.file
+    if (!file) {
+      const error = new Error('Please upload a file')
+      error.httpStatusCode = 400
+      return next(error)
+    }
+
+    db.Posts.create({
+      item: req.body.item,
+      description: req.body.description,
+      picture:  file.fieldname + '-' + Date.now()+".jpg"
+    })
+      .then(function() {
+        console.log(response)
+        res.redirect(307, "/");
+      })
+      .catch(function(err) {
+        res.status(401).json(err);
+      });
+
+        //  res.send(file)
+    
+  })
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
