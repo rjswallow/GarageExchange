@@ -97,6 +97,7 @@ module.exports = function(app) {
   });
 
 
+
   app.get("/login", function(req, res) {
     // // If the user already has an account send them to the members page
     // if (req.user) {
@@ -115,6 +116,16 @@ module.exports = function(app) {
 
 
 
+  app.get("/login", function(req, res) {
+    // // If the user already has an account send them to the members page
+    // if (req.user) {
+    //   res.redirect("/members");
+    // }
+    res.render("login");
+  });
+
+
+ 
   app.get("/post", function(req, res) {
     // // If the user already has an account send them to the members page
     // if (req.user) {
@@ -122,6 +133,8 @@ module.exports = function(app) {
     // }
     res.render("post");
   });
+
+ 
 
   app.get("/api/search", function(req, res) {
     // // If the user already has an account send them to the members page
