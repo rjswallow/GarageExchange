@@ -32,7 +32,7 @@ module.exports = function(app) {
     })
       .then(function() {
         console.log(response)
-        res.redirect(307, "/");
+        res.redirect("/");
       })
       .catch(function(err) {
         res.status(401).json(err);
@@ -72,7 +72,7 @@ module.exports = function(app) {
     })
       .then(function() {
         console.log(response)
-        res.redirect(307, "/");
+        res.redirect("/");
       })
       .catch(function(err) {
         res.status(401).json(err);
