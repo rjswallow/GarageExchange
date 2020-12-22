@@ -132,7 +132,7 @@ require("./routes/api-routes.js")(app);
 //     item: "Gorgeous tiles and bathroom sinks",
 //     description:
 //       "Beautiful Bizassa glass tiles. They can go indoors or out, vertically or horizontally and around corners. 19 boxes @ ~ 16 square feet per box, plus two matching bowl sinks.",
-//     picture: imageData10,
+//    picture: imageData10, 
 //   },
 //   {
 //     item: "Specialized Hardrock Sport Disc",
