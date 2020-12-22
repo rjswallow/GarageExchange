@@ -1,7 +1,7 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
-var posts = require("../models/post");
+// var posts = require("../models/post");
 
 
 module.exports = function(app) {
@@ -21,7 +21,7 @@ module.exports = function(app) {
       password: req.body.password
     })
       .then(function() {
-        res.redirect(307, "/api/login");
+        res.redirect("/");
       })
       .catch(function(err) {
         res.status(401).json(err);
