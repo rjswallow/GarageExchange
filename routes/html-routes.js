@@ -96,14 +96,7 @@ module.exports = function(app) {
     res.render("index", {posts:allPosts});
   });
 
-  // app.get("/signup", function(req, res) {
-  //   // If the user already has an account send them to the members page
-  //   if (req.user) {
-  //     res.redirect("/members");
-  //   }
-  //   res.sendFile(path.join(__dirname, "../public/signup.html"
-  // });
-  app.get("/signup", function(req, res) {
+   app.get("/signup", function(req, res) {
     // // If the user already has an account send them to the members page
     // if (req.user) {
     //   res.redirect("/members");
@@ -111,51 +104,15 @@ module.exports = function(app) {
     res.render("signup");
   });
 
-  // app.get("/login", function(req, res) {
-  //   // If the user already has an account send them to the members page
-  //   if (req.user) {
-  //     res.redirect("/members");
-  //   }
-  //   res.sendFile(path.join(__dirname, "../views/login.handlebars"
-  // });
-
   app.get("/login", function(req, res) {
-    // // If the user already has an account send them to the members page
-    // if (req.user) {
-    //   res.redirect("/members");
-    // }
-    res.render("login");
+      res.render("login");
   });
-
-  // app.get("/login", function(req, res) {
-  //   // If the user already has an account send them to the members page
-  //   if (req.user) {
-  //     res.redirect("/members");
-  //   }
-  //   res.sendFile(path.join(__dirname, "../public/login.html"
-  // });
 
   app.get("/post", function(req, res) {
-    // // If the user already has an account send them to the members page
-    // if (req.user) {
-    //   res.redirect("/members");
-    // }
-    res.render("post");
+     res.render("post");
   });
 
-  // app.get("/login", function(req, res) {
-  //   // // If the user already has an account send them to the members page
-  //   // if (req.user) {
-  //   //   res.redirect("/members");
-  //   // }
-  //   res.render("login");
-  // });
-
   app.get("/api/search", function(req, res) {
-    // // If the user already has an account send them to the members page
-    // if (req.user) {
-    //   res.redirect("/members");
-    // }
     res.json(allPosts);
   });
 
