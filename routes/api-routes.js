@@ -28,6 +28,21 @@ module.exports = function(app) {
       });
   });
 
+  app.post("/api/newPost", function(req, res) {
+    db.Posts.create({
+      item: req.body.item,
+      description: req.body.description,
+      picture: req.body.picture
+    })
+      .then(function() {
+        console.log(response)
+        res.redirect(307, "/");
+      })
+      .catch(function(err) {
+        res.status(401).json(err);
+      });
+  });
+
   // Route for logging user out
   app.get("/logout", function(req, res) {
     req.logout();
