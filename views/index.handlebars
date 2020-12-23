@@ -1,0 +1,65 @@
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ml-auto">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">GarageExchange</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/login">Sign In</a>
+              </li>
+            </ul>
+    
+          </div>
+        </div>
+      </nav>
+
+   <main> 
+    <div class="container-lg">
+<br>
+<!-- Jumbotron -->
+        <div class="jumbotron bg-dark border border-secondary rounded p-5">
+            <h1 class="display-4 text-light">Welcome to GarageExchange</h1>
+            <p class="lead text-light">Don't throw your old treasures away. Exchange them! </p>
+            <hr class="my-4">
+            <p class="text-light">Search from the millions of items posted daily!</p>
+            <p class="lead">
+    
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" id="searchBtn" type="submit">Search</button>
+              </form>
+
+              <br>
+            
+              <a class="btn btn-primary btn-lg" href="/post" role="button">New Post</a>
+            </p>
+          </div>
+<br>
+
+<section class="p-5 bg-dark border my-3">
+<div class="row" id="postContainer">
+    {{#each posts}}
+            <div class="col-md-3 mx-auto">
+                <div class="card" style="width: 18rem;">
+                    <img src={{this.picture}} class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.item}}</h5>
+                        <p class="card-text">{{this.description}}</p>
+                        <a href="#" class="btn btn-primary">See Details</a>
+                    </div>
+                </div>
+            </div>
+    {{/each}}        
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="footer py-2 bg-dark">
+    <div class="container">
+      <span class="text-light">©Copyright 2020: GarageExchange</span>
+    </div>
+  </footer>

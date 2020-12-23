@@ -12,7 +12,9 @@ module.exports = function(sequelize, DataTypes) {
       },
       picture: {
           type: Sequelize.BLOB("long"),
+          allowNull: true
       }
     });
     return posts;
   };
+

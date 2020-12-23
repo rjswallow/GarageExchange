@@ -1,5 +1,7 @@
 var db = require("../models");
-var passport = require("../config/garageExchange");
+var passport = require("../config/passport");
+var posts = require("../models/post");
+
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -19,6 +21,21 @@ module.exports = function(app) {
     })
       .then(function() {
         res.redirect(307, "/api/login");
+      })
+      .catch(function(err) {
+        res.status(401).json(err);
+      });
+  });
+
+  app.post("/api/newPost", function(req, res) {
+    db.Posts.create({
+      item: req.body.item,
+      description: req.body.description,
+      picture: req.body.picture
+    })
+      .then(function() {
+        console.log(response)
+        res.redirect(307, "/");
       })
       .catch(function(err) {
         res.status(401).json(err);
