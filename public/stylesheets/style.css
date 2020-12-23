@@ -9,3 +9,8 @@ form.login {
   background-size: cover;
   
 }
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
