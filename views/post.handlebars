@@ -17,7 +17,7 @@
     <main class="container">
         <section class="row">
             <div class="col-md-8">
-                <form class="post" >
+                <form  action="/uploadfile" enctype="multipart/form-data" method="POST" >
 
                     <!--h1 tag (heading) for "Post" -->
                     <h1 class="block-header">New Post </h1>
@@ -27,7 +27,7 @@
                     <div class="form-group">
                         <label for="name" class="col-sm-2 control-label">Item Name</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="name" placeholder="Name" required>
+                            <input type="text" class="form-control" id="name" name="item" placeholder="Name" required>
                         </div>
                     </div>
 
@@ -35,31 +35,37 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="msg">Description</label>
                         <div class="col-sm-10">
-                            <textarea id="msg" class="form-control" rows="3" placeholder="Item description"
+                            <textarea name="description" id="msg" class="form-control" rows="3" placeholder="Item description"
                                 required></textarea>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="form-label" for="customFile">Choose a file or drag it here.</label>
-                        <input type="file" class="form-control" id="customFile" />
+   <input type="file" name="myFile" />
+   <input type="submit" value="Upload a file"/>
                     </div>
 
                     <!--Button "Submit" -->
-                    <button class="submit">Submit</button>
+                 
+   
                 </form>
             </div>
         </section>
     </main>
+  <!--  SINGLE FILE -->
+{{!-- <form action="/uploadfile" enctype="multipart/form-data" method="POST"> 
+   <input type="file" name="myFile" />
+   <input type="submit" value="Upload a file"/>
+</form> --}}
 
+
+ 
     <!--Footer tag -->
-    <footer class="footer">
-        <div class="footerline"></div>
-
-        <p class="text-muted footertext text-center">
-
-            &copy; Powered bY
-        </p>
-    </footer>
+  <footer class="footer py-2 bg-dark">
+    <div class="container">
+      <span class="text-light">©Copyright 2020: GarageExchange</span>
+    </div>
+  </footer>
 
 </div>
