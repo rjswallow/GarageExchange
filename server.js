@@ -6,6 +6,8 @@ var exphbs = require("express-handlebars");
 var passport = require("./config/passport");
 var bcrypt = require("bcryptjs");
 var fs = require("fs");
+var mysql = require('mysql');
+var connection;
 
 // Setting up port and requiring models for syncing
 var PORT = process.env.PORT || 8080;
@@ -42,3 +44,17 @@ db.sequelize.sync().then(function () {
     );
   });
 });
+
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'influence',
+    database: 'garageExchange'
+  });
+};
+
+connection.connect();
+module.exports = connection;
